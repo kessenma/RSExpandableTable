@@ -16,12 +16,18 @@ public class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     
 	public let titleLabel = UILabel()
 	public let arrowLabel = UILabel()
+	
+	public var color: UIColor = UIColor(red: 0.18, green: 0.22, blue: 0.27, alpha: 1.00) {
+		didSet {
+			contentView.backgroundColor = color
+		}
+	}
     
     override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
 		// Content View
-        contentView.backgroundColor = UIColor(hex: 0x2E3944)
+        contentView.backgroundColor = color
         
         let marginGuide = contentView.layoutMarginsGuide
         
@@ -29,7 +35,7 @@ public class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         contentView.addSubview(arrowLabel)
         arrowLabel.textColor = UIColor.white
         arrowLabel.translatesAutoresizingMaskIntoConstraints = false
-        arrowLabel.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        arrowLabel.widthAnchor.constraint(equalToConstant: 20).isActive = true
         arrowLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
         arrowLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
         arrowLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
@@ -63,12 +69,4 @@ public class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         
         delegate?.toggleSection(self, section: cell.section)
     }
-    
-    public func setCollapsed(_ collapsed: Bool) {
-        //
-        // Animate the arrow rotation (see Extensions.swf)
-        //
-        arrowLabel.rotate(collapsed ? 0.0 : .pi / 2)
-    }
-    
 }
