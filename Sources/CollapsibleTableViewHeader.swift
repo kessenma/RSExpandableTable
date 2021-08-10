@@ -17,7 +17,7 @@ public class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
 	public let titleLabel = UILabel()
 	public let arrowLabel = UILabel()
     
-    override init(reuseIdentifier: String?) {
+    override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
 		// Content View
