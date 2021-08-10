@@ -14,13 +14,13 @@ public class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     var delegate: CollapsibleTableViewHeaderDelegate?
     var section: Int = 0
     
-    let titleLabel = UILabel()
+	let titleLabel = UILabel()
     let arrowLabel = UILabel()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        // Content View
+		// Content View
         contentView.backgroundColor = UIColor(hex: 0x2E3944)
         
         let marginGuide = contentView.layoutMarginsGuide
