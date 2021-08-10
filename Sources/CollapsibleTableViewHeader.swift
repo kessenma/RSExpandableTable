@@ -6,16 +6,16 @@
 import UIKit
 
 public protocol CollapsibleTableViewHeaderDelegate {
-    func toggleSection(_ header: CollapsibleTableViewHeader, section: Int)
+	func toggleSection(_ header: CollapsibleTableViewHeader, section: Int)
 }
 
 public class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
     
-    var delegate: CollapsibleTableViewHeaderDelegate?
-    var section: Int = 0
+	public var delegate: CollapsibleTableViewHeaderDelegate?
+	public var section: Int = 0
     
-	let titleLabel = UILabel()
-    let arrowLabel = UILabel()
+	public let titleLabel = UILabel()
+	public let arrowLabel = UILabel()
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
