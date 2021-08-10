@@ -7,8 +7,8 @@ import UIKit
 
 public class CollapsibleTableViewCell: UITableViewCell {
     
-    let nameLabel = UILabel()
-    let detailLabel = UILabel()
+    public let nameLabel = UILabel()
+	public let detailLabel = UILabel()
     
     // MARK: Initalizers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
