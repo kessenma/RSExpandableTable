@@ -64,7 +64,7 @@ public class CollapsibleTableViewHeader: UITableViewHeaderFooterView {
         delegate?.toggleSection(self, section: cell.section)
     }
     
-    func setCollapsed(_ collapsed: Bool) {
+    public func setCollapsed(_ collapsed: Bool) {
         //
         // Animate the arrow rotation (see Extensions.swf)
         //
